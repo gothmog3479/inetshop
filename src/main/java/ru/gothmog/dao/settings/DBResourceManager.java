@@ -14,5 +14,5 @@ public class DBResourceManager {
     public String getValue(String key) {
         return bundle.getString(key);
     }
-    
+
 }
