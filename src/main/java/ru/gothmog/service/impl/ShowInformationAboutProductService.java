@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 public class ShowInformationAboutProductService implements IService {
 
 
-    private static final Logger logger = Logger.getLogger(ShowInformationAboutProductService.class);
+    private static final Logger log = Logger.getLogger(ShowInformationAboutProductService.class);
 
     private final static ShowInformationAboutProductService instance = new ShowInformationAboutProductService();
 
@@ -35,7 +35,7 @@ public class ShowInformationAboutProductService implements IService {
         try {
             product = productDAO.getProduct(idProduct);
         } catch (DAOException e) {
-            logger.error("ProductDAO didn't return a product. Message: " + e.getMessage());
+            log.error("ProductDAO didn't return a product. Message: " + e.getMessage());
         }
 
         if (product != null) {

@@ -13,7 +13,7 @@ import java.util.List;
 
 public class ShowBlacklistService implements IService {
 
-    private static final Logger logger = Logger.getLogger(ShowBlacklistService.class);
+    private static final Logger log = Logger.getLogger(ShowBlacklistService.class);
 
     private static final ShowBlacklistService instance = new ShowBlacklistService();
 
@@ -34,7 +34,7 @@ public class ShowBlacklistService implements IService {
         try {
             clientList = clientDAO.getBlacklist();
         } catch (DAOException e) {
-            logger.error("ClientDAO didn't return clients which are in the blacklist. Message: " + e.getMessage());
+            log.error("ClientDAO didn't return clients which are in the blacklist. Message: " + e.getMessage());
         }
 
         if (!clientList.isEmpty()) {

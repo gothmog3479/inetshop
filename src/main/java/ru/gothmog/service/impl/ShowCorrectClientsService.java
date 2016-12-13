@@ -14,7 +14,7 @@ import java.util.List;
 public class ShowCorrectClientsService implements IService {
 
 
-    private static final Logger logger = Logger.getLogger(ShowCorrectClientsService.class);
+    private static final Logger log = Logger.getLogger(ShowCorrectClientsService.class);
 
     private static final ShowCorrectClientsService instance = new ShowCorrectClientsService();
 
@@ -35,7 +35,7 @@ public class ShowCorrectClientsService implements IService {
         try {
             clientList = clientDAO.getClientsThatAreNotIncludedInBlacklist();
         } catch (DAOException e) {
-            logger.error("ClientDAO didn't return clients which aren't included in the blacklist. Message: " + e.getMessage());
+            log.error("ClientDAO didn't return clients which aren't included in the blacklist. Message: " + e.getMessage());
         }
 
         if (!clientList.isEmpty()) {

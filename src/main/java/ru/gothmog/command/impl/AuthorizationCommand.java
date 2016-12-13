@@ -4,6 +4,7 @@ import ru.gothmog.command.CommandException;
 import ru.gothmog.command.ICommand;
 import ru.gothmog.controller.JspPageName;
 import ru.gothmog.controller.RequestParameterName;
+import ru.gothmog.service.impl.AuthorizationService;
 
 import javax.servlet.http.HttpServletRequest;
 

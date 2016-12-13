@@ -3,6 +3,8 @@ package ru.gothmog.command.impl;
 import ru.gothmog.command.CommandException;
 import ru.gothmog.command.ICommand;
 import ru.gothmog.controller.JspPageName;
+import ru.gothmog.service.impl.RemoveFromBlacklistService;
+import ru.gothmog.service.impl.ShowBlacklistService;
 
 import javax.servlet.http.HttpServletRequest;
 
