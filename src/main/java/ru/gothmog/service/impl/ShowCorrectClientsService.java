@@ -11,13 +11,14 @@ import ru.gothmog.service.IService;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-public class ShowBlacklistService implements IService {
+public class ShowCorrectClientsService implements IService {
 
-    private static final Logger logger = Logger.getLogger(ShowBlacklistService.class);
 
-    private static final ShowBlacklistService instance = new ShowBlacklistService();
+    private static final Logger logger = Logger.getLogger(ShowCorrectClientsService.class);
 
-    public static ShowBlacklistService getInstance() {
+    private static final ShowCorrectClientsService instance = new ShowCorrectClientsService();
+
+    public static ShowCorrectClientsService getInstance() {
         return instance;
     }
 
@@ -32,9 +33,9 @@ public class ShowBlacklistService implements IService {
         }
 
         try {
-            clientList = clientDAO.getBlacklist();
+            clientList = clientDAO.getClientsThatAreNotIncludedInBlacklist();
         } catch (DAOException e) {
-            logger.error("ClientDAO didn't return clients which are in the blacklist. Message: " + e.getMessage());
+            logger.error("ClientDAO didn't return clients which aren't included in the blacklist. Message: " + e.getMessage());
         }
 
         if (!clientList.isEmpty()) {
