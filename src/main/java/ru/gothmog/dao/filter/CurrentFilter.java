@@ -3,8 +3,10 @@ package ru.gothmog.dao.filter;
 import org.apache.log4j.Logger;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
+@WebFilter(displayName = "currentFilter", servletNames = "controller")
 public class CurrentFilter implements Filter {
 
     private ServletContext context;
