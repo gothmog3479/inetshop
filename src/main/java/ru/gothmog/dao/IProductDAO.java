@@ -28,6 +28,6 @@ public interface IProductDAO {
 
     void updateQuantityOfProductsInStock(int idProduct, int newValueOfQuantity) throws DAOException;
 
-    Map<Integer, List<Object>> getDataOfAllOrdersOfOneClient(List<Order> orderList) throws DAOException;
+    Map<Long, List<Object>> getDataOfAllOrdersOfOneClient(List<Order> orderList) throws DAOException;
 
 }
